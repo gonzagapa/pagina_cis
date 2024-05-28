@@ -1,0 +1,16 @@
+---
+interface Props {
+  src: string;
+  id: string;
+}
+
+const { src, id } = Astro.props;
+---
+
+<div id={id} class="duration-700 ease-in-out" data-carousel-item="active">
+  <img
+    src={src}
+    class="absolute left-1/2 top-1/2 block w-full -translate-x-1/2 -translate-y-1/2"
+    alt="flyer"
+  />
+</div>
