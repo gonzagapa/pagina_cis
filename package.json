@@ -12,7 +12,11 @@
   "dependencies": {
     "@astrojs/check": "^0.7.0",
     "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/open-sans": "^5.0.29",
+    "@fontsource/alfa-slab-one": "^5.0.20",
+    "@fontsource/oswald": "^5.0.20",
     "astro": "^4.9.2",
+    "flowbite": "^2.3.0",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5"
   }
