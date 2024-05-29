@@ -1,0 +1,183 @@
+---
+import Carouselitem from "./Carouselitem.astro";
+
+const SRCFLYERS = [
+  { src: "/FlyersEventos/General_Egresadas.jpg", id: "carousel-item-1" },
+  { src: "/FlyersEventos/Principal_Egresadas.jpg", id: "carousel-item-2" },
+  { src: "/FlyersEventos/general_SemanaTematica.jpg", id: "carousel-item-3" },
+  {
+    src: "/FlyersEventos/Princiapal_SemanaTematica.jpg",
+    id: "carousel-item-4",
+  },
+];
+---
+
+<div id="carousel-example" class="relative w-full" data-carousel="slide">
+  <!-- Carousel wrapper -->
+  <div
+    class="relative h-72 overflow-hidden rounded-lg sm:h-64 xl:h-80 2xl:h-96"
+  >
+    {
+      SRCFLYERS.map((flyer) => (
+        <div
+          id={flyer.id}
+          class="duration-700 ease-in-out"
+          data-carousel-item="active"
+        >
+          <img
+            src={flyer.src}
+            class="absolute left-1/2 top-1/2 block w-full -translate-x-1/2 -translate-y-1/2"
+            alt="flyer"
+          />
+        </div>
+      ))
+    }
+    <!-- <Carouselitem
+      src="/FlyersEventos/General_Egresadas.jpg"
+      id="carousel-item-1"
+    />
+    <Carouselitem
+      src="/FlyersEventos/General_Egresadas.jpg"
+      id="carousel-item-2"
+    />
+    <Carouselitem
+      src="/FlyersEventos/General_Egresadas.jpg"
+      id="carousel-item-3"
+    />
+    <Carouselitem
+      src="/FlyersEventos/General_Egresadas.jpg"
+      id="carousel-item-4"
+    /> -->
+    <!-- Slider indicators -->
+    <div
+      class="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse"
+    >
+      <button
+        id="carousel-indicator-1"
+        type="button"
+        class="h-3 w-3 rounded-full bg-blue-500"
+        aria-current="true"
+        aria-label="Slide 1"
+        data-carousel-slide-to="0"
+      >
+      </button>
+      <button
+        id="carousel-indicator-2"
+        type="button"
+        class="h-3 w-3 rounded-full bg-blue-500"
+        aria-current="false"
+        aria-label="Slide 2"
+        data-carousel-slide-to="2"></button>
+      <button
+        id="carousel-indicator-3"
+        type="button"
+        class="h-3 w-3 rounded-full bg-blue-500"
+        aria-current="false"
+        aria-label="Slide 3"
+        data-carousel-slide-to="3"></button>
+      <button
+        id="carousel-indicator-4"
+        type="button"
+        class="h-3 w-3 rounded-full bg-blue-500"
+        aria-current="false"
+        aria-label="Slide 4"
+        data-carousel-slide-to="4"></button>
+    </div>
+    <!-- Slider controls -->
+    <button
+      id="data-carousel-prev"
+      type="button"
+      class="group absolute left-7 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+      data-carousel-prev
+    >
+      <span
+        class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-blue-500 group-hover:bg-yellow-500 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70"
+      >
+        <svg
+          class="h-4 w-4 text-white dark:text-gray-800"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 6 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 1 1 5l4 4"></path>
+        </svg>
+        <span class="hidden">Previous</span>
+      </span>
+    </button>
+    <button
+      id="data-carousel-next"
+      type="button"
+      class="group absolute right-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+      data-carousel-next
+    >
+      <span
+        class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-blue-500 group-hover:bg-yellow-500 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70"
+      >
+        <svg
+          class="h-4 w-4 text-white dark:text-gray-800"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 6 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 9 4-4-4-4"></path>
+        </svg>
+        <span class="hidden">Next</span>
+      </span>
+    </button>
+  </div>
+
+  <script>
+    import { Carousel } from "flowbite";
+    import type { CarouselItem } from "flowbite";
+
+    const carouselElement = document.getElementById("default-example");
+
+    const items: CarouselItem[] = [
+      {
+        position: 0,
+        el: document.getElementById("carousel-item-1") as HTMLElement,
+      },
+      {
+        position: 1,
+        el: document.getElementById("carousel-item-2") as HTMLElement,
+      },
+      {
+        position: 2,
+        el: document.getElementById("carousel-item-3") as HTMLElement,
+      },
+      {
+        position: 3,
+        el: document.getElementById("carousel-item-4") as HTMLElement,
+      },
+    ];
+
+    const carousel = new Carousel(carouselElement, items);
+
+    const $prevButton = document.getElementById(
+      "data-carousel-prev"
+    ) as HTMLElement;
+    const $nextButton = document.getElementById(
+      "data-carousel-next"
+    ) as HTMLElement;
+
+    $prevButton.addEventListener("click", () => {
+      console.log(carousel.getItem(2));
+    });
+
+    $nextButton.addEventListener("click", () => {
+      carousel.next();
+    });
+  </script>
+</div>
