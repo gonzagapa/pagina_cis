@@ -1,0 +1,53 @@
+---
+interface Props {
+	title: string;
+	text1: string;
+    text2: string;
+    text3: string;
+    text4: string;
+    text5: string;
+}
+
+const {title, text1, text2, text3,text4,text5,  } = Astro.props;
+---
+
+
+<div class="card">
+		<h2>
+			<strong>{title}</strong>
+		</h2>
+        <p>{text1}</p>
+        <p>{text2}</p>
+        <p>{text3}</p>
+        <p>{text4}</p>
+        <p>{text5}</p>
+</div>
+
+
+<style>
+	.card{
+    	text-align: center;
+        color: white;
+		background-color: #0B1D5A;
+		background-image: none;
+		background-size: 400%;
+		background-position: 100%;
+        margin-top: 60px;
+        padding-top: 10px;
+    }
+
+	h2 {
+		margin: 1px;
+        padding-bottom: 10px;
+		font-size: 2rem;
+        color-scheme: white;      
+	}
+	
+
+
+    p {
+        font-size: 1.5rem;
+        padding: 10px;
+	}
+
+</style>

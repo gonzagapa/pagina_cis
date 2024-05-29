@@ -1,0 +1,45 @@
+---
+interface Props {
+	title: string;
+	body: string;
+}
+
+const {title, body } = Astro.props;
+---
+
+
+<div class="card">
+		<h2>
+			<strong>{title}</strong>
+		</h2>
+		<p>
+			{body}
+		</p>
+</div>
+
+
+<style>
+	.card{
+    	text-align: center;
+        color: white;
+		background-color: #0B1D5A;
+		background-image: none;
+		background-size: 400%;
+		background-position: 100%;
+        margin-top: 5px;
+        padding-top: 10px;
+    }
+
+	h2 {
+		margin: 1px;
+        padding-bottom: 10px;
+		font-size: 2rem;
+        color-scheme: white;      
+	}
+	
+    p {
+        font-size: 1.2rem;
+        padding: 20px;
+	}
+
+</style>

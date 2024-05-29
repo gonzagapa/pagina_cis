@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/NosotrosLayout.astro';
+import CardMV from '../components/MisionVisionCard.astro';
+import CardOV from '../components/ObjetivosValoresCard.astro';
+---
+
+<Layout title="Nosotros">
+    <main>
+        <img src="../../public/LogoCisSecundario.png" alt="LogoCIS" class="responsiveLogo">
+        
+        <p class="text-justify text-2xl py-10">
+        La Comunidad de Ingeniería en Sistemas es un grupo dedicado a apoyar y
+        mejorar la formación de los estudiantes en el área de Tecnologías de la 
+        Información, ofreciendo diversas actividades y recursos, como 
+        competencias, talleres, ponencias, cursos, asesorías y proyectos de
+        investigación y desarrollo de software, para fortalecer las habilidades
+        prácticas y teóricas de sus miembros.
+        </p>
+
+        <svg width="100%" height="100">
+            <rect x="0" y="20" width="100%" height="10" fill="#9F7D1E" />
+        </svg>
+
+        <div class="card-grid">
+            <CardMV title="MISIÓN" 
+            body="Brindar conocimiento y actividades en pro de la comunidad estudiantil. Alentando al estudiante a lo largo de su carrera, ofreciendo competencias, talleres, ponencias, cursos, asesorías y proyectos de investigación y desarrollo de software que mejoren sus habilidades dentro del área de Tecnologías de Información."/>
+
+            <CardMV title="VISIÓN" 
+            body="Ser una comunidad estudiantil que colabore en la formación y capacitación del estudiante para potenciar los conocimientos adquiridos en clase y desarrollar habilidades que actualmente se encuentran en pleno auge en el mundo laboral."/>
+        </div>
+
+        <svg width="100%" height="100">
+            <rect x="0" y="50" width="100%" height="10" fill="#9F7D1E" />
+        </svg>
+
+        <div>
+            <CardOV title="OBJETIVOS"
+            text1="1. Fomentar el aprendizaje continuo mediante talleres y cursos especializados."
+            text2="2. Desarrollar proyectos de investigación en Tecnologías de la Información." 
+            text3="3. Ofrecer asesorías personalizadas para mejorar el rendimiento académico y profesional."
+            text4="4. Organizar competencias que desafíen y mejoren habilidades técnicas y creativas."
+            text5="5. Facilitar acceso a ponencias y eventos con expertos del sector."/>
+        </div>
+
+        <div>
+            <CardOV title="VALORES"
+            text1="1. Innovación"
+            text2="2. Colaboración" 
+            text3="3. Compromiso"
+            text4="4. Excelencia"
+            text5="5. Integridad"/>
+        </div>
+
+        <svg width="100%" height="100">
+            <rect x="0" y="50" width="100%" height="10" fill="#9F7D1E" />
+        </svg>
+
+        <h1 class="text-4xl font-bold text-center">ORGANIGRAMA</h1>
+
+        <img src="../../public/OrganigramaCIS.jpeg" alt="OrganigramaCIS" class="responsiveOrganigrama">
+    </main>
+</Layout>
+
+<style>
+    .responsiveLogo {
+    max-width: 50%;
+    height: auto;
+    margin: 0 auto;
+    }
+
+    .card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+
+    .responsiveOrganigrama{
+        max-width: 100%;
+        height: auto;
+        margin: 10px auto;
+    }
+
+</style>
