@@ -13,3 +13,17 @@ Este repositorio contiene las imagenes,paginas y diseños utilizados para la ela
 - [Flowbite](https://flowbite.com/): Librería de componentes UI basados en Tailwind.
 
 ![CIS](/public/Logos/LogoCisSecundario.png)
+
+## Integrantes del equipo
+
+- Gonzalo Anuar Pérez Aramburo
+
+- Omar Antonio Contreras Sosa
+
+- Karla Daniela Leal Rebolledo
+
+- Javier Alberto Palacios López
+
+- Fátima Iliana Chavez Estrada
+
+- Fidencio Alarcón López
