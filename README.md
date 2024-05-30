@@ -2,6 +2,27 @@
 
 Este repositorio contiene las imagenes,paginas y diseños utilizados para la elaboración de la página del capitulado de la carrera de Ingeniería en Sistemas Computacionales del Instituto Tecnológico México Campus Veracrúz.
 
+## Proceso de instalación y visualización local.
+
+- Clonamos el proyecto
+
+```bash
+  git clone https://github.com/gonzagapa/pagina_cis.git
+  cd pagina_cis
+```
+
+- Instalamos las dependencias necesarias
+
+```bash
+  npm install
+```
+
+- Iniciamos el servidor local
+
+```bash
+  npm run dev
+```
+
 ## 🚀Tecnologías utilizadas
 
 - [Astro](https://astro.build): Framework utilizado para la generación de páginas enfocadas al contenido.
