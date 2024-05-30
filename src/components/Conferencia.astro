@@ -1,0 +1,84 @@
+---
+interface Props {
+  imagen: string;
+  docente: string;
+  empresa: string;
+  zona: string;
+  generacion: string;
+  fecha: string;
+  horario: string;
+  lugar: string;
+  cursourl?: string;
+}
+const {
+  imagen,
+  docente,
+  empresa,
+  zona,
+  generacion,
+  fecha,
+  horario,
+  lugar,
+  cursourl,
+} = Astro.props;
+---
+
+<article class="mt-8">
+  <div class="bg-yellow-500 rounded-md h-2 sm:w-2/4 sm:mx-auto mb-4"></div>
+  <div
+    class="flex gap-3 min-[600px]:gap-32 flex-col items-center min-[600px]:flex-row min-[600px]:justify-center"
+  >
+    <section class="basis-[200px]">
+      <figure
+        class="h-32 max-w-[300px] min-w-44 w-full min-h-56 max-h-80 overflow-hidden min-[600px]:overflow-visible"
+      >
+        <img
+          src={imagen}
+          alt="conferencista"
+          class="max-w-full h-full min-[600px]:h-auto object-contain"
+        />
+      </figure>
+    </section>
+    <section class="text-center flex flex-col gap-2">
+      <p class="md:text-xl">
+        <span class="capitalize text-blue-500 font-bold">Docente:</span>{
+          docente
+        }
+      </p>
+      <p class="md:text-xl">
+        <span class="capitalize text-blue-500 font-bold">Empresa:</span>{
+          empresa
+        }
+      </p>
+      <p class="md:text-xl">{zona}.</p>
+      <p class="md:text-xl">
+        <span class="capitalize text-blue-500 font-bold">generación:</span>{
+          generacion
+        }
+      </p>
+      <p class="md:text-xl">
+        <span class="capitalize text-blue-500 font-bold">Fecha:</span>{fecha}
+      </p>
+      <p class="md:text-xl">
+        <span class="capitalize text-blue-500 font-bold">Horario:</span>{
+          horario
+        }
+      </p>
+      <p class="md:text-xl">
+        <span class="capitalize text-blue-500 font-bold">Lugar:</span>{lugar}
+      </p>
+    </section>
+  </div>
+  {
+    cursourl && (
+      <div class="flex justify-center items-center mt-8">
+        <a
+          href={cursourl}
+          class="text-white/75 text-center bg-yellow-500 hover:bg-yellow-500/75 py-1 px-2 rounded-sm text-base"
+        >
+          Inscribirme
+        </a>
+      </div>
+    )
+  }
+</article>

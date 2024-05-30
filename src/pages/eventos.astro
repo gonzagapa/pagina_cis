@@ -1,0 +1,99 @@
+---
+import Banner from "../components/Banner.astro";
+import Conferencia from "../components/Conferencia.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="eventos">
+  <main class="max-w-7xl w-11/12 mx-auto pt-2 font-body mb-16">
+    <Banner src="/Cursos-Eventos/Banner.png" />
+    <p class="text-center md:text-xl mb-16">
+      EL Festival Latinoamericano de Instalación de Software Libre es EL evento
+      de difusión de Software Libre más grande en Latinoamérica y está dirigido
+      a todo tipo de público: estudiantes, académicos, empresarios,
+      trabajadores, funcionarios públicos, entusiastas y aun personas que no
+      poseen mucho conocimiento informático.
+    </p>
+    <h2
+      class="font-title text-lg md:text-2xl mb-8 text-center text-blue-500 font-bold uppercase"
+    >
+      Ponencias y conferencias
+    </h2>
+    <article>
+      <div class="bg-yellow-500 rounded-md h-2 sm:w-2/4 sm:mx-auto mb-4"></div>
+      <div
+        class="flex gap-3 min-[600px]:gap-32 flex-col items-center min-[600px]:flex-row min-[600px]:justify-center"
+      >
+        <section class="basis-[200px]">
+          <figure
+            class="h-32 max-w-[300px] min-w-44 w-full min-h-56 max-h-80 overflow-hidden min-[600px]:overflow-visible"
+          >
+            <img
+              src="/Cursos-Eventos/conf-2.jpeg"
+              alt="conferencista"
+              class="max-w-full h-full min-[600px]:h-auto object-contain"
+            />
+          </figure>
+        </section>
+        <section class="text-center flex flex-col gap-2">
+          <p class="md:text-xl">
+            <span class="capitalize text-blue-500 font-bold">Docente:</span>Hugo
+            Pérez Casanov
+          </p>
+          <p class="md:text-xl">
+            <span class="capitalize text-blue-500 font-bold">Empresa:</span
+            >ITVER
+          </p>
+          <p class="md:text-xl">Veracruz, Mexico.</p>
+          <p class="md:text-xl">
+            <span class="capitalize text-blue-500 font-bold">generación:</span
+            >1990
+          </p>
+          <p class="md:text-xl">
+            <span class="capitalize text-blue-500 font-bold">Fecha:</span>Lunes
+            22 de Abril 2024
+          </p>
+          <p class="md:text-xl">
+            <span class="capitalize text-blue-500 font-bold">Horario:</span
+            >13:00hrs -14:00hrs
+          </p>
+          <p class="md:text-xl">
+            <span class="capitalize text-blue-500 font-bold">Lugar:</span
+            >Auditorio Fermín Carrillo
+          </p>
+        </section>
+      </div>
+    </article>
+    <Conferencia
+      imagen="/Cursos-Eventos/Rafael.jpeg"
+      docente="Rafael Moreno Casado"
+      empresa="Ofix"
+      zona="Veracruz,México"
+      generacion="2000"
+      fecha="Lunes 22 de Abril 2024"
+      horario="13:00hrs - 14:00hrs"
+      lugar="Auditorio Fermín Carrillo"
+    />
+
+    <Conferencia
+      imagen="/Cursos-Eventos/JoseAntonio.jpeg"
+      docente="José Antonio Gamboa Aguirre"
+      empresa="CSFacturación"
+      zona="Veracruz,México"
+      generacion="2019"
+      fecha="Lunes 22 de Abril 2024"
+      horario="13:00hrs - 14:00hrs"
+      lugar="Auditorio Fermín Carrillo"
+    />
+    <Conferencia
+      imagen="/Cursos-Eventos/conf-1.jpeg"
+      docente="Arturo Rosas Muñoz"
+      empresa="Konesh Soluciones"
+      zona="Veracruz,México"
+      generacion="2006"
+      fecha="Lunes 22 de Abril 2024"
+      horario="13:00hrs - 14:00hrs"
+      lugar="Auditorio Fermín Carrillo"
+    />
+  </main>
+</Layout>

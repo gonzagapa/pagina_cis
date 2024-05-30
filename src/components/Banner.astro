@@ -1,0 +1,14 @@
+---
+interface Props {
+  src: string;
+}
+const { src } = Astro.props;
+---
+
+<figure class="h-32 max-w-lg min-w-60 mx-auto my-8">
+  <img
+    src={src}
+    alt="Imagen oficial del evento"
+    class="object-cover max-w-full"
+  />
+</figure>
