@@ -20,6 +20,7 @@
       class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
       aria-controls="navbar-default"
       aria-expanded="false"
+      id="trigger"
     >
       <span class="sr-only">Open main menu</span>
       <svg
@@ -71,7 +72,7 @@
         </li>
         <li>
           <a
-            href="#"
+            href="https://softdcc.com/lvl240101"
             class="block py-2 px-3 text-white xl:text-lg rounded hover:bg-yellow-400 md:hover:bg-transparent md:border-0 md:hover:text-yellow-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
             >Tutorias</a
           >
@@ -87,3 +88,15 @@
     </div>
   </div>
 </nav>
+<script>
+  import { Collapse } from "flowbite";
+
+  const targetEl = document.getElementById("navbar-default");
+  const triggerEl = document.getElementById("trigger");
+
+  const collapse = new Collapse(targetEl, triggerEl);
+
+  triggerEl?.addEventListener("click", () => {
+    collapse.toggle();
+  });
+</script>
